@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Slide back jQuery background image carousel forward only slider">
+        <meta name="author" content="intenseagile.com">
+        <title>Slide Back</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            .jumbotron {
+                height:500px;
+                /*background-size:cover;
+                background-position:center;*/
+                background-color: transparent;
+                color:#eee;
+                text-shadow: 1px 1px 1px rgba(0,0,0,0.5),0 0 40px rgba(0,0,0,0.8);
+            }
+            .jumbotronimages {
+                position: absolute;
+                top:50px;
+                bottom:0;
+                z-index:-1;
+                height:500px;
+                overflow:hidden;
+                width:100%;
+            }
+            .jumbotronimages img {
+                width: 100%;
+                display: block;
+            }
+            .jumbotron h2 {
+                font-size: 42px;
+            }
+            .jumbotron h3 {
+                font-size: 34px;
+            }
+        </style>
+    </head>
+
+    <body >
+        <div class="navbar navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Slide Back</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://github.com/intenseagile/noconfigcarousel">Docs</a></li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+            </div><!-- /container -->
+        </div><!-- /navbar navbar-static-top -->
+
+    <div class="jumbotron" >
+        <div class="jumbotronimages" data-images='["img/white.jpg", "img/yellow.jpg", "img/amazing.jpg", "img/street.jpg", "img/door.jpg", "img/houses.jpg", "img/seaside.jpg", "img/window.jpg"]'>
+            
+        </div>
+        <div class="container">
+            <h2 class="text-center">No Config Carousel</h2>
+            <h3 class="text-center">Image Carousel jQuery Plugin</h3>
+            <h3 class="text-center">No Options. No Configuration. No Controls</h3>			
+        </div>
+    </div>
+    <div class="footer">
+        Follow <a href="http://twitter.com/intenseagile">@intenseagile</a>. <a href="http://intenseagile.com">Intense Agile</a>
+    </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="../js/noconfigcarousel.js"></script>
+
+
+    <script>
+      $(function() {
+        $(".jumbotronimages").noConfigCarousel();                
+      });
+    </script>
+  </body>
+</html>
